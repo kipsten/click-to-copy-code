@@ -1,0 +1,18 @@
+{
+  "name": "click-to-copy-code",
+  "description": "Puts a small gray box at the bottom of <code> elements. Click on it to copy all the code in the block. Yes, it's kind of unnecessary",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": 
+    [
+        {
+            "matches":["<all_urls>"],
+            "js":["jquery.js", "clickToCopyCode.js"]
+            
+        }
+    ],
+  "manifest_version": 2
+}
+
