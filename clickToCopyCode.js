@@ -15,7 +15,7 @@ $("body").append(popupDiv);
 
 $("code").each( function(){ 
     
-    if ( $(this).text().indexOf("\n") == -1){
+    if ($(this).text().indexOf("\n") == -1){
         return;
     }
 
@@ -35,12 +35,12 @@ $("code").each( function(){
         range.selectNodeContents($(this).prev().get(0))
         
         selection = window.getSelection ();
-        selection.removeAllRanges ();
-        selection.addRange (range);
+        selection.removeAllRanges();
+        selection.addRange(range);
         
         document.execCommand('copy');
         
-        selection.removeAllRanges ();
+        selection.removeAllRanges();
         
         $(popupDiv).css("left", e.pageX+15);
         $(popupDiv).css("top", e.pageY);
@@ -55,7 +55,6 @@ $("code").each( function(){
             }, 50);
         })
         
-
     });
     
     $(this).after(iDiv);
